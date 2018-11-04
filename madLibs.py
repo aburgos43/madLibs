@@ -1,3 +1,5 @@
+import random
+
 def monkeyKingMadLib():
     print("Monkey King Mad Lib")
     blank1 = raw_input("> Give me a verb: ")
@@ -20,7 +22,6 @@ def monkeyKingMadLib():
     print("After he did that, the king played chess on his brother's %r and then combed his %r hair with a comb made out of old fish bones." % (blank10, blank11))
 
     print("Later, that same day, I saw the Monkey King dance %r in front of an audience of kangaroos and wombats." % (blank12))
-monkeyKingMadLib()
 
 def bikeRidingMadLib():
     print("Bike Riding Mad Lib")
@@ -42,7 +43,6 @@ def bikeRidingMadLib():
     print(" increase the rate of your %r beat. More %r" % (blank6, blank7))
     print(" around the world %r bicycles than drive %r. No matter what kind of %r" % (blank8, blank9, blank10))
     print(" you %r, always be sure to wear a/an %r helmet. Make sure to have %r reflectors too!" % (blank11, blank12, blank13))
-bikeRidingMadLib()
 
 def valentinesMadLib():
     print("Valentines Mad Lib")
@@ -64,7 +64,6 @@ def valentinesMadLib():
     print("and saw a %r %r! It said, 'Will you be my %r?'"% (blank4, blank5, blank6))
     print("I was so %r! I %r to see who it was from , but there was no %r. " %(blank7, blank8, blank9))
     print("So, at %r, I asked for clues, but %r didn't know about it. Finally, someone told me that %r gave me the %r." %(blank10, blank11, blank12, blank13))
-valentinesMadLib()
 
 def excusedMadLib():
     print("Excused Mad Lib")
@@ -78,7 +77,6 @@ def excusedMadLib():
     print("Date: %r" % (blank1))
     print("Please excuse %r who is far too %r to attend %r class." % (blank2, blank3, blank4))
     print("Signed: %r" %(blank5))
-excusedMadLib()
 
 def sickExcuseMadLib():
     print("Sick Excuse MadLib")
@@ -92,7 +90,6 @@ def sickExcuseMadLib():
     print("Date: %r" % (blank1))
     print("%r is sick with the %r flu. Drink more %r and take %r as needed." % (blank2, blank3, blank4, blank5))
     print("Signed: %r" % (blank6))
-sickExcuseMadLib()
 
 def hallPassMadLib():
     print("Hallpass Mad Lib")
@@ -105,7 +102,6 @@ def hallPassMadLib():
     print("Date: %r" % (blank1))
     print("%r is authorized to be at %r instead of %r class." % (blank2, blank3, blank4))
     print("Signed: %r" % (blank5))
-hallPassMadLib()
 
 def coolHallPassMadLib():
     print("Cool Hallpass Mad Lib ")
@@ -118,7 +114,6 @@ def coolHallPassMadLib():
     print("Date: %r" % (blank1))
     print("%r is too cool for %r class. Instead, she/he will be attending the %r class." %(blank2, blank3, blank4))
     print("Signed: %r" % (blank5))
-coolHallPassMadLib()
 
 def FFWinterMadLib():
     print("Fun Facts about Winter Mad Lib")
@@ -138,7 +133,6 @@ def FFWinterMadLib():
     print("Winter is one of %r seasons of the year. The other seasons are %r, %r, and %r." % (blank1, blank2, blank3, blank4))
     print("Winter is the time of year when the %r is furthest from earth. The weather tends to be %r in winter, with %r fall and cold temperatures." %(blank5, blank6, blank7))
     print("Some winter sports include %r, %r, and %r . Hot %r with %r on top is a popular winter drink." % (blank8, blank9, blank10, blank11, blank12))
-FFWinterMadLib()
 
 def LunchRoomMadLib():
     print("Lunch Room Mad Lib")
@@ -157,7 +151,6 @@ def LunchRoomMadLib():
     print("Do not go to the %r food stand across the street from school." % (blank3))
     print("The hamburgers they serve are fried in %r and are made of %r meat." %(blank4, blank5))
     print("So take a sandwich made of %r or %r, it's much healthier! Drink %r milk instead of %r colas." % (blank6, blank7, blank8, blank9))
-LunchRoomMadLib()
 
 def ParkTripMadLib():
     print("Trip to the Park! Mad Lib")
@@ -181,4 +174,10 @@ def ParkTripMadLib():
     print("We also saw big %r balloons tied to a %r." % (blank5, blank6))
     print("Once we got to the %r park, the sky turned %r. It started to %r and %r." % (blank7, blank8, blank9, blank10))
     print("%r and I %r all the way home. Tomorrow, we will go to the %r park again and hope it doesn't %r." % (blank11, blank12, blank13, blank14))
-ParkTripMadLib()
+
+madLibList = [ParkTripMadLib, LunchRoomMadLib, FFWinterMadLib, coolHallPassMadLib, hallPassMadLib,
+sickExcuseMadLib, excusedMadLib, valentinesMadLib, bikeRidingMadLib, monkeyKingMadLib]
+
+madLibChoice = random.choice(madLibList)()
+
+print("One of ten mad libs: ", madLibChoice)
