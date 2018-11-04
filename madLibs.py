@@ -179,5 +179,3 @@ madLibList = [ParkTripMadLib, LunchRoomMadLib, FFWinterMadLib, coolHallPassMadLi
 sickExcuseMadLib, excusedMadLib, valentinesMadLib, bikeRidingMadLib, monkeyKingMadLib]
 
 madLibChoice = random.choice(madLibList)()
-
-print("One of ten mad libs: ", madLibChoice)
